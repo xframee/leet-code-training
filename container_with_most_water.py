@@ -21,7 +21,7 @@ def maxArea2(height: List[int]) -> int:
         if area > best:
             best = area
         
-        if l <= r:
+        if height[l] <= height[r]:
             l +=1
         else:
             r -= 1
