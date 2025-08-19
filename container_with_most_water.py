@@ -11,4 +11,22 @@ def maxArea(height: List[int]) -> int:
 
     return max_area
 
-print (maxArea([1,8,6,2,5,4,8,3,7]))
+def maxArea2(height: List[int]) -> int:
+    best = 0
+    
+    l, r = 0, len(height) - 1
+    
+    while l < r:
+        area = min(height[l], height[r]) * (r - l)
+        if area > best:
+            best = area
+        
+        if l <= r:
+            l +=1
+        else:
+            r -= 1
+    
+    return best
+
+print (maxArea2([1,8,6,2,5,4,8,3,7]))
+print (maxArea2([1,1]))
