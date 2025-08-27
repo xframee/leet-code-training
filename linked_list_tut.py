@@ -23,8 +23,22 @@ B.next = C
 print(Head)
 
 #Traverse the list - O(n)
+
 curr = Head
 
 while curr:
     print (curr)
     curr = curr.next
+
+#Display the linkedlist by throwing all elements in an array instead - O(n)
+
+def display(Head):
+    curr = Head
+    elements = []
+    while curr:
+        elements.append(str(curr.val))
+        curr = curr.next
+    print(" -> ".join(elements))
+
+display(Head)
+
