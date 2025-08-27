@@ -42,3 +42,18 @@ def display(Head):
 
 display(Head)
 
+#Search for a node value O(n)
+
+def search(Head, val):
+    curr = Head
+    while curr:
+        if curr.val == val:
+            return True
+        else:
+            curr = curr.next
+
+    return False
+
+print(search(Head, 2))
+print(search(Head, 7))
+print(search(Head, 1))
